@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=stylesheet href=jmobile/jquery.mobile-1.4.5.css />
+	<script src=jmobile/jquery.js></script>
+	<script src=jmobile/jquery.mobile-1.4.5.js></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/MainController.js"></script>
+
+	<style>
+		#myDiv {
+			background-color : #ffffff;
+			width : 100px;
+			height : 50px;
+		}
+	</style>
+</head>
+<body ng-app="MyApp">
+	<div data-role="page" id=win1 ng-controller="MainController">
+		<div data-role="panel" data-display="overlay" id="mypanel">
+    		<ul data-role="listview">
+    			<!-- Delete Button
+    			<li data-icon="delete"><a href="#" data-rel="close"> </a></li>
+				-->
+				<li><a href="#win1">Halaman 1</a></li>
+				<li><a href="#win2">Halaman 2</a></li>
+				<li><a href="#win3">Halaman 3</a></li>
+    		</ul>
+		</div>
+		<div data-role="header">
+			<a href="#mypanel" data-icon="bars" data-iconpos="notext">Menu</a>
+			<h1>Test 1</h1>
+			<!--
+			<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-refresh ui-btn-icon-notext">refresh</button>
+			-->
+		</div>
+		<div data-role="content">
+			<center><h1> Calculator </h1></center>
+			<input type="text" ng-model="Angka" id="Angka1"/>
+			<input type="text" ng-model="Pangkat" id="Angka2"/>
+			<input type="button" value="Hasil" id="Hasil"/>
+			<input type="text" ng-model="Hasilnya" id="HasilAkhir" disabled/>
+			<!--<button ng-click="Count(isian)">Count</button>-->
+			<form>
+				<div class="ui-field-contain">
+        				<select name="select-native-1" id="select-native-1" class="side" onchange="location = this.value;">
+        					<option value="#win1">Halaman 1</option>
+        					<option value="#win2">Halaman 2</option>
+			    	    	<option value="#win3">Halaman 3</option>
+		        		</select>
+				</div> 
+			</form>
+		</div>
+	</div>
+
+
+
+	<!--page2-->
+	<div data-role="page" id=win2 ng-controller="MainController">
+		<div data-role="panel" data-display="overlay" id="mypanel">
+    		<ul data-role="listview">
+    			<!-- Delete Button
+    			<li data-icon="delete"><a href="#" data-rel="close"> </a></li>
+				-->
+				<li><a href="#win1">Halaman 1</a></li>
+				<li><a href="#win2">Halaman 2</a></li>
+				<li><a href="#win3">Halaman 3</a></li>
+    		</ul>
+		</div>
+		<div data-role="header">
+			<a href="#mypanel" data-icon="bars" data-iconpos="notext">Menu</a>
+			<h1>Test 1</h1>
+			<!--
+			<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-refresh ui-btn-icon-notext">refresh</button>
+			-->
+			
+		</div>
+		<div data-role="content">
+			<center><h1> RGB </h1></center>
+			<label for="Color_Picker">Input with # (#ffffff) : </label>
+			<input name ="Color_Picker" type="text" ng-model="Picker" id="RGB"/>
+			<input type="button" value="Get Color" id="Picker"/>
+			<center><div id="myDiv"></div></center>
+			<form>
+				<div class="ui-field-contain">
+        				<select name="select-native-1" id="select-native-1" class="side" onchange="location = this.value;">
+        					<option value="#win1">Halaman 1</option>
+        					<option value="#win2">Halaman 2</option>
+			    	    	<option value="#win3">Halaman 3</option>
+		        		</select>
+				</div> 
+			</form>
+		</div>
+	</div>
+
+
+
+	<!--page3-->
+	<div data-role="page" id=win3 ng-controller="MainController">
+		<div data-role="panel" data-display="overlay" id="mypanel">
+    		<ul data-role="listview">
+    			<!-- Delete Button
+    			<li data-icon="delete"><a href="#" data-rel="close"> </a></li>
+				-->
+				<li><a href="#win1">Halaman 1</a></li>
+				<li><a href="#win2">Halaman 2</a></li>
+				<li><a href="#win3">Halaman 3</a></li>
+    		</ul>
+		</div>
+		<div data-role="header">
+			<a href="#mypanel" data-icon="bars" data-iconpos="notext">Menu</a>
+			<h1>Test 1</h1>
+			<!--
+			<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-refresh ui-btn-icon-notext">refresh</button>
+			-->
+			
+		</div>
+		<div data-role="content">
+			<center><h1> Rangkuman </h1></center>
+			<p>
+
+			</p>
+			<button class="show-page-loading-msg" data-textonly="false" data-textvisible="false" data-msgtext="" data-inline="true">Icon (default)</button>
+			<button class="hide-page-loading-msg" data-inline="true" data-icon="delete">Hide</button>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						GitHub
+						<p>
+							GitHub adalah layanan penginangan web bersama untuk proyek pengembangan perangkat lunak yang menggunakan sistem pengontrol versi Git dan layanan hosting internet. Hal ini banyak digunakan untuk kode komputer. Ini memberikan kontrol akses dan beberapa fitur kolaborasi seperti pelacakan bug, permintaan fitur, manajemen tugas, dan wiki untuk setiap proyek.
+						</p>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						JQuery Mobile
+						<p>
+							JQuery Mobile adalah web framework yang dioptimalkan untuk perangkat-perangkat layar sentuh (touch-optimized). sebagai library, jQuery Mobile yang dikenal sebagai library JavaScript maupun framework mobile ini dikembangkan oleh tim jQuery Project. Tujuan pengembangannya adalah berfokus pada pembuatan framework yang kompatibel dengan beraneka ragam perangkat smartphone dan tablet.
+						</p>
+					</div>
+				</div>
+			</div><!-- /grid-a -->
+
+			<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+				<thead>
+					<tr>
+					<th data-priority="2">Rank</th>
+					<th>Movie Title</th>
+					<th data-priority="3">Year</th>
+					<th data-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+					<th data-priority="5">Reviews</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>1</th>
+					<td><a href="http://en.wikipedia.org/wiki/Citizen_Kane" data-rel="external">Citizen Kane</a></td>
+					<td>1941</td>
+					<td>100%</td>
+					<td>74</td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<td><a href="http://en.wikipedia.org/wiki/Casablanca_(film)" data-rel="external">Casablanca</a></td>
+					<td>1942</td>
+					<td>97%</td>
+					<td>64</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<form>
+			<label for="slider-1">Slider:</label>
+			<input type="range" name="slider-1" id="slider-1" min="0" max="100" value="50">
+		</form>
+
+		<center><a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">POPUP!</a> </center>
+		<div data-role="popup" id="popupBasic">
+			<p>WELCOME TO THE END OF THE PAGE</p>
+		</div>
+			<form>
+				<div class="ui-field-contain">
+        				<select name="select-native-1" id="select-native-1" class="side" onchange="location = this.value;">
+        					<option value="#win1">Halaman 1</option>
+        					<option value="#win2">Halaman 2</option>
+			    	    	<option value="#win3">Halaman 3</option>
+		        		</select>
+				</div> 
+			</form>
+		</div>
+	</div>
+</body>
+</html>
